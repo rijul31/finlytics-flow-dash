@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 210 100% 56%; /* Bright blue */
+    --primary-foreground: 98 100% 62%; /* Bright green */
+
+    --secondary: 50 100% 60%; /* Bright yellow */
+    --secondary-foreground: 210 100% 56%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 98 100% 62%; /* Bright green */
+    --accent-foreground: 210 100% 56%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 100% 56%;
+    --input: 50 100% 60%;
+    --ring: 210 100% 56%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 50 100% 96%;
+    --sidebar-foreground: 210 100% 56%;
+    --sidebar-primary: 210 100% 56%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 98 100% 62%;
+    --sidebar-accent-foreground: 50 100% 60%;
+    --sidebar-border: 210 100% 56%;
+    --sidebar-ring: 50 100% 60%;
+
+    /* Custom color variables for our theme */
+    --yellow: 50 100% 60%;
+    --blue: 210 100% 56%;
+    --green: 98 100% 62%;
+    --gradient-primary: linear-gradient(135deg, #f9d923 0%, #00cfff 100%);
+    --gradient-secondary: linear-gradient(135deg, #00cfff 0%, #3ae374 100%);
+    --gradient-tertiary: linear-gradient(135deg, #f9d923 0%, #3ae374 100%);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 100% 96%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 100% 96%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 100% 96%;
+
+    --primary: 210 100% 66%; /* Brighter blue for dark */
+    --primary-foreground: 98 100% 72%; /* Brighter green for dark */
+
+    --secondary: 50 100% 70%; /* Brighter yellow for dark */
+    --secondary-foreground: 210 100% 66%;
+
+    --muted: 210 40% 16.1%;
+    --muted-foreground: 215.4 16.3% 66.9%;
+
+    --accent: 98 100% 72%; /* Brighter green for dark */
+    --accent-foreground: 210 100% 66%;
+
+    --destructive: 0 84.2% 70.2%;
+    --destructive-foreground: 210 100% 96%;
+
+    --border: 210 100% 66%;
+    --input: 50 100% 70%;
+    --ring: 210 100% 66%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 100% 10%;
+    --sidebar-foreground: 50 100% 70%;
+    --sidebar-primary: 210 100% 66%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 98 100% 72%;
+    --sidebar-accent-foreground: 50 100% 70%;
+    --sidebar-border: 210 100% 66%;
+    --sidebar-ring: 50 100% 70%;
+
+    /* Custom color variables for our theme */
+    --yellow: 50 100% 70%;
+    --blue: 210 100% 66%;
+    --green: 98 100% 72%;
+    --gradient-primary: linear-gradient(135deg, #ffe066 0%, #00cfff 100%);
+    --gradient-secondary: linear-gradient(135deg, #00cfff 0%, #3ae374 100%);
+    --gradient-tertiary: linear-gradient(135deg, #ffe066 0%, #3ae374 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+/* Custom animations and effects */
+@layer components {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .hover-scale {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+
+  .gradient-bg {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-bg-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  .gradient-bg-tertiary {
+    background: var(--gradient-tertiary);
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .text-yellow {
+    color: hsl(var(--yellow));
+  }
+
+  .text-blue {
+    color: hsl(var(--blue));
+  }
+
+  .text-green {
+    color: hsl(var(--green));
+  }
+
+  .bg-yellow {
+    background-color: hsl(var(--yellow));
+  }
+
+  .bg-blue {
+    background-color: hsl(var(--blue));
+  }
+
+  .bg-green {
+    background-color: hsl(var(--green));
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--violet));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--pink));
+}
+
+/* Custom form styling */
+.form-input {
+  @apply bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-violet-500 focus:border-transparent;
+}
+
+/* Table styling */
+.table-hover:hover {
+  @apply bg-gray-50 dark:bg-gray-700;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.15);
+}
+
+.dark .card-hover:hover {
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+}
