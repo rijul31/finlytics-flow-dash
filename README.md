@@ -228,11 +228,10 @@ MIT License
 
 ---
 ![Screenshot 2025-06-29 211014](https://github.com/user-attachments/assets/e37771e4-936d-45e5-918b-2d65f0a0a28c)
-![Screenshot 2025-06-29 214752](https://github.com/user-attachments/assets/02a0de9e-7125-4ef5-aeed-f1c4340216e3)
 ![Screenshot 2025-06-29 214806](https://github.com/user-attachments/assets/e8363143-abd4-4d77-a007-a0a4e38f3218)
 ![Screenshot 2025-06-29 214829](https://github.com/user-attachments/assets/b9a7272a-5e77-4e77-a89f-e8055b7d19ef)
 ![Screenshot 2025-06-29 214846](https://github.com/user-attachments/assets/72290501-313d-4723-8700-4462d933b6f9)
-
-
+![image](https://github.com/user-attachments/assets/db969fe1-26c4-4858-823c-e85b3264ccad)
+![image](https://github.com/user-attachments/assets/6af1ecae-72fc-4b8a-991e-108328d29bab)
 
 
